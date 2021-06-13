@@ -1,9 +1,8 @@
 __pycache__
 .vscode
-data
 wandb
 *.txt
 *.json
+*.gz
 
 configs/*
-data/*
