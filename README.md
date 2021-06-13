@@ -1,3 +1,44 @@
+# General instructions
+For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll further down.
+
+## Hyper-parameter tuning
+To launch a grid-search experiments run:
+```
+python tune.py --model=<model name> --dataset=<dataset_name> --time_offset=<valid-test-time> --maxlen=<max-sequence-length> --grid_config=<name-of-config-file> --bypass_wandb
+```
+
+### Possible values of arguments (case-insensitive)
+- `<model name>`
+  - MP or MostPopular
+  - SVD or PureSVD
+  - GA-SATF
+  - LA-SATF
+  - SASRec
+- `<dataset_name>` / `<valid-test-time>` / `<max-sequence-length>`
+  - ML-1M / "4months-4months" / 200
+  - AMZ-B / "3weeks-3weeks" / 50
+  - AMZ-G / "6weeks-6weeks" / 50
+  - Steam / "1days-2days" / 50
+- `<name-of-config-file>` (files must be stored in the `config` folder)
+  - "" 
+
+
+If you have `wanbd` login and want to store results in the cloud, then remove `--bypass_wandb` switch. You may need to properly initialize your wandb project/entity settings or set `sweep_args` dictionary in the `tune.py` module. You can also explicitly specify an existing sweep to report to by passing `--sweep=<sweep-id>`.
+
+You can additionally pass `--grid_steps=n` to run over only `n` random grid points. If this parameter is not set, the program will run until parameter grid is exhausted or execution is interrupted by user.
+
+Once the grid is exhausetd (or user interrupted execution by pressing Ctrl+C), the program will attempt to run final test based on the best found config and report the results. You can also run test separately using any valid configuration as described below.
+
+## Manually running tests
+If you want to see scores corresponding to a specific configuration, you can run:
+
+```
+python test.py --model=<model name> --dataset=<dataset_name> --time_offset=<valid-test-time> --maxlen=<max-sequence-length> --test_config=<path-to-config-file> --bypass_wandb
+```
+
+Most of the aruments here are the same and should correspond to experiments from the tuning phase. If you have a local config file, then it must be specified via `<path-to-config-file>`. You can also specify `--sweep` (don't forget to remove `--bypass_wandb`), in which case the program will analyze all runs in the specified sweep and take configuration corresponding the highest target metric score (`NDCG@10` by default). You can also specify an exact run from the sweep by passing `--run_id=<sweeep-run-id>`.
+
+# The reported results and corresponding configurations
 ## Hyper-parameters
 |           |                  |     AMZ-B |     AMZ-G |     ML-1M |    Steam |
 |:----------|:-----------------|----------:|----------:|----------:|---------:|
