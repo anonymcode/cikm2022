@@ -38,6 +38,12 @@ python test.py --model=<model name> --dataset=<dataset_name> --time_offset=<vali
 
 Most of the aruments here are the same and should correspond to experiments from the tuning phase. If you have a local config file, then it must be specified via `<path-to-config-file>`. You can also specify `--sweep` (don't forget to remove `--bypass_wandb`), in which case the program will analyze all runs in the specified sweep and take configuration corresponding the highest target metric score (`NDCG@10` by default). You can also specify an exact run from the sweep by passing `--run_id=<sweeep-run-id>`.
 
+## Examples
+- Running grid search (locally) for `LA-SATF` model on `Amazon Beauty` dataset:  
+  `python tune.py --model=LA-SATF --dataset=amz-b --time_offset=3weeks-3weeks --maxlen=50 --grid_config="lsatf_grid" --bypass_wandb`
+- Running test (locally) with simple popularity-based model, which does not require any confguration (hence, `--test_config` argument is omitted):  
+  `python test.py --model=MP --dataset=amz-b --time_offset=3weeks-3weeks --maxlen=50  --bypass_wandb`
+
 # The reported results and corresponding configurations
 ## Hyper-parameters
 |           |                  |     AMZ-B |     AMZ-G |     ML-1M |    Steam |
