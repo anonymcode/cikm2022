@@ -1,5 +1,5 @@
 # General instructions
-For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll further down.
+For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll down to the [last section](https://github.com/anonymcode/icdm2021/blob/main/README.md#the-reported-results-and-corresponding-configurations).
 
 ## Hyper-parameter tuning
 To launch a grid-search experiments run:
