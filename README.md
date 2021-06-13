@@ -1,6 +1,13 @@
 # General instructions
 For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll down to the [last section](https://github.com/anonymcode/icdm2021/blob/main/README.md#the-reported-results-and-corresponding-configurations).
 
+## Downloading and preparing data
+You need to run this command once in order to download and preprocess datasest the same way we did in our paper:
+```
+python data/prepare.py
+```
+It automatically selects the necessary columns, convert time info into the unified format across all datasets, performs p-core filtering (for Steam) and saves data into compact gz files in the `data` folder. Note, **it may take a long time to process all 4 datasets**, be patient.
+
 ## Hyper-parameter tuning
 To launch a grid-search experiments run:
 ```
