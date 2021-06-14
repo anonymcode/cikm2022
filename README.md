@@ -26,9 +26,14 @@ python tune.py --model=<model name> --dataset=<dataset_name> --time_offset=<vali
   - AMZ-B / "3weeks-3weeks" / 50
   - AMZ-G / "6weeks-6weeks" / 50
   - Steam / "1days-2days" / 50
-- `<name-of-config-file>` (files must be stored in the `config` folder)
-  - "" 
+- `<name-of-config-file>` (files must be stored in the `grids` folder)
+  - gsatf_grid
+  - lsatf_grid
+  - sasrec_grid
+  - svd_grid
+  - svdN_grid
 
+You can also specify your onw grid files and place them into the `grids` folder. Or, alternatively, modify the default ones listed above.
 
 If you have `wanbd` login and want to store results in the cloud, then remove `--bypass_wandb` switch. You may need to properly initialize your wandb project/entity settings or set `sweep_args` dictionary in the `tune.py` module. You can also explicitly specify an existing sweep to report to by passing `--sweep=<sweep-id>`.
 
