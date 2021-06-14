@@ -33,7 +33,7 @@ python tune.py --model=<model name> --dataset=<dataset_name> --time_offset=<vali
   - svd_grid
   - svdN_grid
 
-You can also specify your onw grid files and place them into the `grids` folder. Or, alternatively, modify the default ones listed above.
+You can also specify your onw grid-search config files and place them into the `grids` folder. Or, alternatively, modify the default ones listed above.
 
 If you have `wanbd` login and want to store results in the cloud, then remove `--bypass_wandb` switch. You may need to properly initialize your wandb project/entity settings or set `sweep_args` dictionary in the `tune.py` module. You can also explicitly specify an existing sweep to report to by passing `--sweep=<sweep-id>`.
 
