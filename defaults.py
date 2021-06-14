@@ -1,7 +1,7 @@
 import os
 
 
-num_threads = '16'
+num_threads = '' # empty string means use all cores
 wandb_silent = 'true'
 
 
