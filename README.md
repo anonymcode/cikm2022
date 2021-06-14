@@ -1,8 +1,8 @@
 # General instructions
-For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll down to the [this section](#the-reported-results-and-corresponding-configurations). For the software requirements and the list of python packages see [Requirements](#requirements) section.
+For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll down to the [this section](#the-reported-results-and-corresponding-configurations). For the software requirements and the list of python packages see [Requirements](#requirements) section (please follow the described steps for setting an environment before proceeding).
 
 ## Downloading and preparing data
-You need to run this command once in order to download and preprocess datasest the same way we did in our paper:
+You need to run this command once in order to download and preprocess datasets the same way we did in our paper:
 ```
 python data/prepare.py
 ```
