@@ -53,6 +53,7 @@ Most of the aruments here are the same and should correspond to experiments from
 ## Examples
 - Running grid search (locally) for `LA-SATF` model on `Amazon Beauty` dataset:  
   `python tune.py --model=LA-SATF --dataset=amz-b --time_offset=3weeks-3weeks --maxlen=50 --grid_config="lsatf_grid" --bypass_wandb`
+  - if you let the program to exhaust entire grid or if you interrupt its execution at som moment (by hitting Ctrl+C once), it will automatically perform testing on the best found hyper-parameters configuration and report the results.
 - Running test (locally) with simple popularity-based model, which does not require any confguration (hence, `--test_config` argument is omitted):  
   `python test.py --model=MP --dataset=amz-b --time_offset=3weeks-3weeks --maxlen=50  --bypass_wandb`
 
