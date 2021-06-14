@@ -109,7 +109,7 @@ Most of the aruments here are the same and should correspond to experiments from
 
 # Requirements
 ## mamba
-We use `mamba` package mamanger (based on `conda`) with the default `conda-forge` channel for installing Python packages. The easiest way to get it is to download and install `mamba-forge` distribution from [here](https://github.com/conda-forge/miniforge#mambaforge).
+We use `mamba` package manager (based on `conda`) with the default `conda-forge` channel for installing Python packages. The easiest way to get it is to download and install `mamba-forge` distribution from [here](https://github.com/conda-forge/miniforge#mambaforge).
 
 ## main python packages
 When mamba is installed, you can recreate our einvironment by running:
