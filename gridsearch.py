@@ -50,7 +50,7 @@ def sweep_grid(sweep_id, param_names):
     return param_grid
 
 def run_grid_search(grid_step_call, args, grid_skip=None, sweep_args=None, ts=None):
-    grid_config = import_config(args.grid_config)
+    grid_config = import_config(args.grid_config, configs_dir='grids')
     save_config(args.res_dir, args.dataset, join_str(args.model, ts), validate_ranges(grid_config), suffix='grid')
     skip_config = None
     if grid_skip:
