@@ -1,5 +1,5 @@
 # General instructions
-For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll down to the [last section](https://github.com/anonymcode/icdm2021/blob/main/README.md#the-reported-results-and-corresponding-configurations).
+For reproducing our work run the commands described below. If you just want to see final optimal configurations and the scores (reported in the paper), please scroll down to the [this section](https://github.com/anonymcode/icdm2021/blob/main/README.md#the-reported-results-and-corresponding-configurations). For the software requirements and the list of python packages see Requirements section.
 
 ## Downloading and preparing data
 You need to run this command once in order to download and preprocess datasest the same way we did in our paper:
@@ -106,3 +106,21 @@ Most of the aruments here are the same and should correspond to experiments from
 | steam | COV         | 0.047        | 0.368        | 0.018        | 0.070        | 0.438        | 0.997        | 0.080        |
 |       | HR          | 0.013+-0.001 | 0.091+-0.003 | 0.000+-0.000 | 0.039+-0.002 | 0.084+-0.003 | 0.001+-0.000 | 0.115+-0.004 |
 |       | NDCG        | 0.007+-0.001 | 0.047+-0.002 | 0.000+-0.000 | 0.020+-0.001 | 0.043+-0.002 | 0.001+-0.000 | 0.060+-0.002 |
+
+# Requirements
+## mamba
+We use `mamba` package mamanger (based on `conda`) with the default `conda-forge` channel for installing Python packages. The easiest way to get it is to download and install `mamba-forge` distribution from [here](https://github.com/conda-forge/miniforge#mambaforge).
+
+## main python packages
+When mamba is installed, you can recreate our einvironment by running:
+```
+ mamba env create -f environment.yml
+```
+This will create a new environment named `satf`. The `environment.yml` file with all the needed dependencies is included in this repository.
+
+## extra packages
+We use [`Polara` framework]() for orchestrating some parts of the experiments. You can install it into your enviroment by running:
+```
+conda activate satf
+pip install --no-cache-dir --upgrade git+https://github.com/evfro/polara.git@develop#egg=polara
+```
