@@ -6,7 +6,7 @@ You need to run this command once in order to download and preprocess datasest t
 ```
 python data/prepare.py
 ```
-It automatically selects the necessary columns, convert time info into the unified format across all datasets, performs p-core filtering (for Steam) and saves data into compact gz files in the `data` folder. Note, **it may take a long time to process all 4 datasets**, be patient.
+It automatically selects the necessary columns, convert time info into the unified format across all datasets, performs p-core filtering (for Steam) and saves data into compact gz files in the `data` folder. Note, **it may take a long time to process all 4 datasets**, approximately 40+ minutes.
 
 ## Hyper-parameter tuning
 To launch a grid-search experiments run:
