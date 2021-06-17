@@ -67,13 +67,13 @@ Most of the aruments here are the same and should correspond to experiments from
 |           | user_rank        |  800      |  900      |  300      |  700     |
 |           | rescaled         |  False    |  False    |  True     |  False   |
 |           | attention_decay  |    1      |    0      |    1.2    |    0     |
-|           | iter             |  nan      |    1      |    5      |    0     |
+|           | num_iters        |    2      |    2      |    6      |    1     |
 | LA-SATF   | scaling          |    0.2    |    0.2    |    0.2    |    0     |
 |           | item_rank        |  600      |  600      |  200      |  900     |
 |           | user_rank        |  700      |  500      |  600      |  500     |
 |           | rescaled         |  False    |  False    |  True     |  False   |
 |           | attention_decay  |    0      |    0      |    1      |    1     |
-|           | iter             |    2      |  nan      |    3      |    1     |
+|           | num_iters        |    3      |    3      |    4      |    2     |
 |           | attention_rank   |    1      |    1      |   20      |    1     |
 |           | sequences_rank   |    2      |    2      |   20      |    2     |
 |           | attention_window |    2      |    2      |   40      |    2     |
