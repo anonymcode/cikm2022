@@ -79,8 +79,8 @@ Most of the aruments here are the same and should correspond to experiments from
 |           | attention_window |    2      |    2      |   40      |    2     |
 | PureSVD   | scaling          |    1      |    1      |    1      |    1     |
 |           | rank             |  800      | 1500      |  100      |  100     |
-| PureSVD-N | scaling          |    0.6    |    0.2    |   -0.2    |    0     |
-|           | rank             | 2000      | 1000      | 1500      | 1500     |
+| PureSVD-N | scaling          |    0.6    |    0.2    |    0.0    |    0.0   |
+|           | rank             | 2000      | 1000      |  800      | 1500     |
 |           | rescaled         | False     | False     | False     | False    |
 | SASRec    | lr               |    0.0001 |    0.0001 |    0.0001 |    1e-05 |
 |           | l2_emb           |    0      |    0      |    0      |    0     |
