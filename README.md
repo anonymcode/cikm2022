@@ -28,10 +28,12 @@ python tune.py --model=<model name> --dataset=<dataset_name> --time_offset=<vali
   - Steam / "1days-2days" / 50
 - `<name-of-config-file>` (files must be stored in the `grids` folder)
   - gsatf_grid
-  - lsatf_grid
+  - lsatf_grid or lsatf_grid_ml1m
   - sasrec_grid
   - svd_grid
   - svdN_grid
+
+**Important note**: as the multilinear rank values for the LA-SATF model depend on the dataset you'll need to adjust the grid configuration file at `grids/lsatf_grid.py` accordingly. By default, the provided configuration is suitable for all all datasets except `ML-1M`. For the ML-1M dataset you have to provide the `lsatf_grid_ml1m` option to the `--grid_config=` argument.
 
 You can also specify your onw grid-search config files and place them into the `grids` folder. Or, alternatively, modify the default ones listed above.
 
