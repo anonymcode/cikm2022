@@ -33,7 +33,7 @@ python tune.py --model=<model name> --dataset=<dataset_name> --time_offset=<vali
   - svd_grid
   - svdN_grid
 
-**Important note**: as the multilinear rank values for the LA-SATF model depend on the dataset you'll need to adjust the grid configuration file at `grids/lsatf_grid.py` accordingly. By default, the provided configuration is suitable for all all datasets except `ML-1M`. For the ML-1M dataset you have to provide the `lsatf_grid_ml1m` option to the `--grid_config=` argument.
+**Important note**: as the multilinear rank values and the attention window size for the LA-SATF model depend on the dataset, you'll need to adjust the grid configuration file at settings accordingly. By default, the grid configuration provided in `lsatf_grid` is suitable for all datasets except `ML-1M`. For the ML-1M dataset, you have to provide the `lsatf_grid_ml1m` option to the `--grid_config=` argument.
 
 You can also specify your onw grid-search config files and place them into the `grids` folder. Or, alternatively, modify the default ones listed above.
 
